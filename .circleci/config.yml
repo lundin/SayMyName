@@ -1,0 +1,13 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: circleci/golang:1.11.13
+    working_directory: /go/src/github.com/lundin/SayMyname
+    steps:
+      - checkout
+      - run:
+          name: run tests
+          command: |
+            go fmt ./...
+            go test -v ./...
