@@ -8,7 +8,7 @@ func TestSayName(t *testing.T) {
 
 output:=SayName("")
 
-if output!="hello stranger" {
+if output!="Hello stranger" {
 t.Errorf("Failed")
 }else {
 t.Logf("Success")
